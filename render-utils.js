@@ -1,7 +1,7 @@
 export function renderGoblin(goblin) {
     const goblinEl = document.createElement('div');
     const nameEl = document.createElement('p');
-    const hpEl = document.createElementNS('p');
+    const hpEl = document.createElement('p');
 
     let goblinEmoji = '';
 

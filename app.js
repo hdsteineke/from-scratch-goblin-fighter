@@ -1,4 +1,6 @@
 // import functions and grab DOM elements
+import { renderGoblin } from './render-utils.js';
+
 const spanDefeated = document.querySelector('#defeated-goblins');
 const spanHP = document.querySelector('#player-hp');
 
@@ -16,7 +18,33 @@ let goblins = [
     { name: 'Jimbo', hp: 2 }
 ];
 
+goblinForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const data = new FormData(goblinForm);
+
+    const newGoblin = {
+        name: data.get('goblin-name'),
+        hp: Math.ceil(Math.random() * 4),
+    };
+
+    goblins.push(newGoblin);
+
+
+    displayGoblins();
 // set event listeners 
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
+
+});
+
+
+function displayGoblins() {
+    goblinList.textContent = '';
+
+    for (let goblin of goblins) {
+        const goblinEl = renderGoblin(goblin);
+
+    }
+}
