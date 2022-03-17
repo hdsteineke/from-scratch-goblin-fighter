@@ -89,3 +89,18 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
+
+.main-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
