@@ -61,7 +61,7 @@ function displayGoblins() {
             if (playerHP > 0 && goblin.hp > 0 && Math.random() > .5) {
                 alert(`${goblin.name} strikes back!`);
                 playerHP--;
-            } else {
+            } else if (goblin.hp > 0) {
                 alert(`${goblin.name} strikes back! But they missed...`);
             }
             
