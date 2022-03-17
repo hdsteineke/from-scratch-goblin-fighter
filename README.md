@@ -24,3 +24,51 @@ Additional considerations:
   - What needs to live in a persistence layer?
 - Is there some state we need to initialize?
 - Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+
+![goblin fighter wireframe](/assets/wireframe.png "goblin fighter wireframe")
+
+Plan:
+- draw wireframe
+- plug in HTML elements
+    - div left: player
+        - p tag for defeated goblins
+        - p tag for player HP
+        - div for player avatar img (or maybe just an img tag would work?)
+    - div right: goblins
+        (wrap these two in a form?)
+        - input field for creating goblins
+        - button for creating goblins
+        - div to hold list of goblins
+            - (dynamically generated):
+                - div for goblin info
+                    - p tag for name
+                    - p tag for HP
+
+- ACP
+
+- grab DOM elements
+    - p tag for displaying defeated goblins state
+    - p tag for displaying player HP
+    - input to create goblin
+    - button to create goblin
+    - div container for list of goblins
+
+- let state:
+    - defeated goblins
+    - player HP
+    - goblin HP (emojis??)
+
+- ACP
+
+
+- create event listeners:
+  - form to create goblins
+  - add EL to every goblin; make them "clickables"
+
+ACP
+
+- write out my functions, testing one piece at a time. 
+
+- don't forget to ACP!
+
+- check work against rubrik
