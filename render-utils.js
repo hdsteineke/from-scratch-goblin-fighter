@@ -5,7 +5,7 @@ export function renderGoblin(goblin) {
 
     let goblinEmoji = '';
 
-    if (goblin.hp >= 4) {
+    if (goblin.hp >= 1) {
         goblinEmoji = '👹';
     } else if (goblin.hp === 0) {
         goblinEmoji = '💀';
