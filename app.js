@@ -46,7 +46,19 @@ function displayGoblins() {
     for (let goblin of goblins) {
         const goblinEl = renderGoblin(goblin);
 
-    goblinList.append(goblinEl);
+        goblinList.append(goblinEl);
+
+        goblinEl.addEventListener('click', () => {
+            if (goblin.hp === 0) {
+                alert('Settle down.');
+            } else if (goblin.hp > 0 && playerHP > 0) {
+                alert(`You hit ${goblin.name}!`);
+                goblin.hp--;
+                //some way to randomize goblinHit, playerHit, and alerts for each
+            }
+            displayGoblins();
+            //****function to display playerHP */
+        });
 
     }
 }
