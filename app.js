@@ -46,5 +46,9 @@ function displayGoblins() {
     for (let goblin of goblins) {
         const goblinEl = renderGoblin(goblin);
 
+    goblinList.append(goblinEl);
+
     }
 }
+
+displayGoblins();
