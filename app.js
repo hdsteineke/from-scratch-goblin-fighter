@@ -49,13 +49,23 @@ function displayGoblins() {
         goblinList.append(goblinEl);
 
         goblinEl.addEventListener('click', () => {
-            if (goblin.hp === 0) {
+            if (goblin.hp <= 0) {
                 alert('Settle down.');
-            } else if (goblin.hp > 0 && playerHP > 0) {
+            } else if (goblin.hp > 0 && Math.random() > .33) {
                 alert(`You hit ${goblin.name}!`);
                 goblin.hp--;
                 //some way to randomize goblinHit, playerHit, and alerts for each
+            } else {
+                alert(`You missed...`);
             }
+            if (playerHP > 0 && goblin.hp > 0 && Math.random() > .5) {
+                alert(`${goblin.name} strikes back!`);
+                playerHP--;
+            } else {
+                alert(`${goblin.name} strikes back! But they missed...`);
+            }
+            
+
             displayGoblins();
             //****function to display playerHP */
         });
