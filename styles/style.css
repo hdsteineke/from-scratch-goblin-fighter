@@ -48,6 +48,7 @@ main {
 section {
     background-color: transparent;
     max-width: 80%;
+    /* height: 800px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,5 +147,6 @@ footer {
 }
 
 .dead {
-    image: url('../assets/dead.png');
+    height: 200px;
+    width: 200px;
 }

@@ -14,7 +14,7 @@ let defeatedGoblins = 0;
 let playerHP = 10;
 let goblins = [
     { name: 'Fabian', hp: 3, strength: 5 },
-    { name: 'Flupe', hp: 4, strength: 2 },
+    { name: 'Flupe', hp: 3, strength: 2 },
     { name: 'Jimbo', hp: 3, strength: 4 }
 ];
 
@@ -63,7 +63,7 @@ function displayGoblins() {
                     return;
                 }
 
-                if (goblin.hp > 0 && Math.random() > .33) {
+                if (goblin.hp > 0 && Math.random() > .01) {
                     alert(`You hit ${goblin.name}!`);
                     goblin.hp--;
                 //some way to randomize goblinHit, playerHit, and alerts for each
@@ -71,7 +71,7 @@ function displayGoblins() {
                     alert(`You missed...`);
                 }
             
-                if (goblin.hp > 0 && Math.random() > .5) {
+                if (goblin.hp > 0 && Math.random() > .99) {
                     alert(`${goblin.name} strikes back!`);
                     playerHP -= goblin.strength;
 
@@ -81,6 +81,7 @@ function displayGoblins() {
             
                 if (goblin.hp === 0) {
                     defeatedGoblins++;
+                    
 
                 } else if (playerHP <= 0) {
                     playerHP = 0;
