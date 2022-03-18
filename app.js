@@ -1,5 +1,6 @@
 // import functions and grab DOM elements
 import { renderGoblin } from './render-utils.js';
+import {randomNames } from './data.js';
 
 const spanDefeated = document.querySelector('#defeated-goblins');
 const spanHP = document.querySelector('#player-hp');
@@ -24,7 +25,7 @@ goblinForm.addEventListener('submit', (e) => {
     const data = new FormData(goblinForm);
 
     const newGoblin = {
-        name: data.get('goblin-name'),
+        name: data.get('goblin-name') || randomNames(),
         hp: Math.ceil(Math.random() * 4),
     };
 
@@ -32,6 +33,8 @@ goblinForm.addEventListener('submit', (e) => {
 
 
     displayGoblins();
+
+    goblinInput.value = '';
 // set event listeners 
   // get user input
   // use user input to update state 
@@ -85,5 +88,3 @@ function displayStats() {
     spanDefeated.textContent = defeatedGoblins;
     spanHP.textContent = playerHP;
 }
-
-console.log(displayStats());
