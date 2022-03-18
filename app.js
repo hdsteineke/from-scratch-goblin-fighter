@@ -65,16 +65,19 @@ function displayGoblins() {
                 alert(`You missed...`);
             }
             
-            if (playerHP > 0 && goblin.hp > 0 && Math.random() > .01) {
+            if (goblin.hp > 0 && Math.random() > .01) {
                 alert(`${goblin.name} strikes back!`);
                 playerHP -= goblin.strength;
+
             } else if (goblin.hp > 0) {
                 alert(`${goblin.name} strikes back! But they missed...`);
             }
             
             if (goblin.hp === 0) {
                 defeatedGoblins++;
-            } else if (playerHP === 0) {
+                
+            } else if (playerHP <= 0) {
+                playerHP = 0;
                 alert('GAME OVER');
             }
             
