@@ -32,6 +32,7 @@ goblinForm.addEventListener('submit', (e) => {
 
 
     displayGoblins();
+    displayStats();
 
     goblinInput.value = '';
 
@@ -51,6 +52,10 @@ function displayGoblins() {
                 alert('Settle down.');
                 return;
             }
+            if (playerHP <= 0) {
+                alert('GAME OVER');
+                return;
+            }
 
             if (goblin.hp > 0 && Math.random() > .33) {
                 alert(`You hit ${goblin.name}!`);
@@ -60,7 +65,7 @@ function displayGoblins() {
                 alert(`You missed...`);
             }
             
-            if (playerHP > 0 && goblin.hp > 0 && Math.random() > .5) {
+            if (playerHP > 0 && goblin.hp > 0 && Math.random() > .01) {
                 alert(`${goblin.name} strikes back!`);
                 playerHP -= goblin.strength;
             } else if (goblin.hp > 0) {
