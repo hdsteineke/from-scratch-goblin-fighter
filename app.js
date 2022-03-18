@@ -15,7 +15,7 @@ let playerHP = 15;
 let goblins = [
     { name: 'Fabian', hp: 3, strength: 5 },
     { name: 'Flupe', hp: 4, strength: 2 },
-    { name: 'Jimbo', hp: 2, strength: 3 }
+    { name: 'Jimbo', hp: 2, strength: 4 }
 ];
 
 goblinForm.addEventListener('submit', (e) => {
@@ -29,7 +29,7 @@ goblinForm.addEventListener('submit', (e) => {
         strength: Math.ceil(Math.random() * 5)
     };
 
-    goblins.push(newGoblin);
+    goblins.unshift(newGoblin);
 
 
     displayGoblins();

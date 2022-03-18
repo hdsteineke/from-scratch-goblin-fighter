@@ -117,3 +117,7 @@ footer {
     font-weight: bolder
     text-position: center;
 }
+
+.monster {
+    background-image: url('../assets/monster.png')
+}
