@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
 import { renderGoblin } from './render-utils.js';
-import {randomNames } from './data.js';
+import { randomNames } from './data.js';
 
 const spanDefeated = document.querySelector('#defeated-goblins');
 const spanHP = document.querySelector('#player-hp');
