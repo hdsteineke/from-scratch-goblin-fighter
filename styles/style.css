@@ -28,8 +28,13 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    /* background-color: var(--color2); */
+    background-image: url('../assets/background.png')
+    
+
 }
+
+
 
 main {
     display: flex;
@@ -77,6 +82,8 @@ header img {
 
 p {
     margin: var(--gutter);
+    padding: 5px;
+    margin: 5px;
 }
   
 footer {
@@ -103,4 +110,10 @@ footer {
 .right {
     display: flex;
     flex-direction: column;
+}
+
+#geralt {
+    font-size: large;
+    font-weight: bolder
+    text-position: center;
 }

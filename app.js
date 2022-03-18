@@ -11,11 +11,11 @@ const goblinList = document.querySelector('.goblin-container');
 
 // let state
 let defeatedGoblins = 0;
-let playerHP = 10;
+let playerHP = 15;
 let goblins = [
     { name: 'Fabian', hp: 3, strength: 5 },
     { name: 'Flupe', hp: 4, strength: 2 },
-    { name: 'Jimbo', hp: 2, strength: 1 }
+    { name: 'Jimbo', hp: 2, strength: 3 }
 ];
 
 goblinForm.addEventListener('submit', (e) => {
@@ -26,6 +26,7 @@ goblinForm.addEventListener('submit', (e) => {
     const newGoblin = {
         name: data.get('goblin-name') || randomNames(),
         hp: Math.ceil(Math.random() * 4),
+        strength: Math.ceil(Math.random() * 5)
     };
 
     goblins.push(newGoblin);
