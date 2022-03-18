@@ -4,6 +4,7 @@ export function renderGoblin(goblin) {
     const imgEl = document.createElement('img');
     const hpEl = document.createElement('p');
 
+    //goblinEl.classList.add('.monster');
     
     //let goblinEmoji = '';
 

@@ -28,6 +28,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
+    font:color; white;
     /* background-color: var(--color2); */
     background-image: url('../assets/background.png')
     
@@ -117,7 +118,7 @@ footer {
 #geralt {
     font-size: large;
     font-weight: bolder
-    text-position: center;
+    
 }
 
 .monster {
@@ -142,4 +143,8 @@ footer {
 
 .hidden {
     display: none;
+}
+
+.dead {
+    image: url('../assets/dead.png');
 }

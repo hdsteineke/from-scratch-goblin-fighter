@@ -15,7 +15,7 @@ let playerHP = 10;
 let goblins = [
     { name: 'Fabian', hp: 3, strength: 5 },
     { name: 'Flupe', hp: 4, strength: 2 },
-    { name: 'Jimbo', hp: 2, strength: 4 }
+    { name: 'Jimbo', hp: 3, strength: 4 }
 ];
 
 
@@ -71,7 +71,7 @@ function displayGoblins() {
                     alert(`You missed...`);
                 }
             
-                if (goblin.hp > 0 && Math.random() > .01) {
+                if (goblin.hp > 0 && Math.random() > .5) {
                     alert(`${goblin.name} strikes back!`);
                     playerHP -= goblin.strength;
 
