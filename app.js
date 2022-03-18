@@ -51,7 +51,9 @@ function displayGoblins() {
         goblinEl.addEventListener('click', () => {
             if (goblin.hp <= 0) {
                 alert('Settle down.');
-            } else if (goblin.hp > 0 && Math.random() > .33) {
+                return;
+            }
+            if (goblin.hp > 0 && Math.random() > .33) {
                 alert(`You hit ${goblin.name}!`);
                 goblin.hp--;
                 //some way to randomize goblinHit, playerHit, and alerts for each
@@ -69,7 +71,7 @@ function displayGoblins() {
             if (goblin.hp === 0) {
                 defeatedGoblins++;
             }
-
+            
             displayGoblins();
             displayStats();
         });
