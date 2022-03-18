@@ -13,9 +13,9 @@ const goblinList = document.querySelector('.goblin-container');
 let defeatedGoblins = 0;
 let playerHP = 10;
 let goblins = [
-    { name: 'Fabian', hp: 3 },
-    { name: 'Flupe', hp: 4 },
-    { name: 'Jimbo', hp: 2 }
+    { name: 'Fabian', hp: 3, strength: 5 },
+    { name: 'Flupe', hp: 4, strength: 2 },
+    { name: 'Jimbo', hp: 2, strength: 1 }
 ];
 
 goblinForm.addEventListener('submit', (e) => {
@@ -62,21 +62,21 @@ function displayGoblins() {
             
             if (playerHP > 0 && goblin.hp > 0 && Math.random() > .5) {
                 alert(`${goblin.name} strikes back!`);
-                playerHP--;
+                playerHP -= goblin.strength;
             } else if (goblin.hp > 0) {
                 alert(`${goblin.name} strikes back! But they missed...`);
             }
             
             if (goblin.hp === 0) {
                 defeatedGoblins++;
-            }
-
-            if (playerHP === 0) {
-                alert('')
+            } else if (playerHP === 0) {
+                alert('GAME OVER');
             }
             
             displayGoblins();
             displayStats();
+
+
         });
 
     }
