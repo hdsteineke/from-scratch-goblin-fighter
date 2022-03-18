@@ -18,9 +18,12 @@ let goblins = [
     { name: 'Jimbo', hp: 2, strength: 4 }
 ];
 
+
+
+
 goblinForm.addEventListener('submit', (e) => {
     e.preventDefault();
-
+    
     const data = new FormData(goblinForm);
 
     const newGoblin = {
@@ -46,48 +49,55 @@ function displayGoblins() {
     for (let goblin of goblins) {
         const goblinEl = renderGoblin(goblin);
 
-        goblinList.append(goblinEl);
+        
+        if (playerHP > 0) {
+            
+            goblinEl.addEventListener('click', () => {
 
-        goblinEl.addEventListener('click', () => {
-            if (goblin.hp <= 0) {
-                alert('Settle down.');
-                return;
-            }
-            if (playerHP <= 0) {
-                alert('GAME OVER');
-                return;
-            }
+                if (playerHP <= 0) {
+                    alert('GAME OVER');
+                    return;
+                }
+                if (goblin.hp <= 0) {
+                    alert('Settle down.');
+                    return;
+                }
 
-            if (goblin.hp > 0 && Math.random() > .33) {
-                alert(`You hit ${goblin.name}!`);
-                goblin.hp--;
+                if (goblin.hp > 0 && Math.random() > .33) {
+                    alert(`You hit ${goblin.name}!`);
+                    goblin.hp--;
                 //some way to randomize goblinHit, playerHit, and alerts for each
-            } else {
-                alert(`You missed...`);
-            }
+                } else {
+                    alert(`You missed...`);
+                }
             
-            if (goblin.hp > 0 && Math.random() > .66) {
-                alert(`${goblin.name} strikes back!`);
-                playerHP -= goblin.strength;
+                if (goblin.hp > 0 && Math.random() > .01) {
+                    alert(`${goblin.name} strikes back!`);
+                    playerHP -= goblin.strength;
 
-            } else if (goblin.hp > 0) {
-                alert(`${goblin.name} strikes back! But they missed...`);
-            }
+                } else if (goblin.hp > 0) {
+                    alert(`${goblin.name} strikes back! But they missed...`);
+                }
             
-            if (goblin.hp === 0) {
-                defeatedGoblins++;
+                if (goblin.hp === 0) {
+                    defeatedGoblins++;
 
-            } else if (playerHP <= 0) {
-                playerHP = 0;
-                alert('GAME OVER');
-            }
+                } else if (playerHP <= 0) {
+                    playerHP = 0;
+                    alert('GAME OVER');
+                }
             
-            displayGoblins();
-            displayStats();
+                displayGoblins();
+                displayStats();
 
-
-        });
-
+                
+            });
+            
+        }
+        if (playerHP === 0) {
+            goblinForm.classList.add('hidden');
+        }
+        goblinList.append(goblinEl);
     }
 }
 
