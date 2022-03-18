@@ -65,7 +65,7 @@ function displayGoblins() {
                 alert(`You missed...`);
             }
             
-            if (goblin.hp > 0 && Math.random() > .01) {
+            if (goblin.hp > 0 && Math.random() > .66) {
                 alert(`${goblin.name} strikes back!`);
                 playerHP -= goblin.strength;
 
@@ -75,7 +75,7 @@ function displayGoblins() {
             
             if (goblin.hp === 0) {
                 defeatedGoblins++;
-                
+
             } else if (playerHP <= 0) {
                 playerHP = 0;
                 alert('GAME OVER');
