@@ -119,5 +119,10 @@ footer {
 }
 
 .monster {
-    background-image: url('../assets/monster.png')
+    background-image: url('../assets/monster.png');
+}
+
+.goblin-container {
+    display: flex;
+    flex-wrap: wrap;
 }

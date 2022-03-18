@@ -11,7 +11,7 @@ const goblinList = document.querySelector('.goblin-container');
 
 // let state
 let defeatedGoblins = 0;
-let playerHP = 15;
+let playerHP = 10;
 let goblins = [
     { name: 'Fabian', hp: 3, strength: 5 },
     { name: 'Flupe', hp: 4, strength: 2 },
