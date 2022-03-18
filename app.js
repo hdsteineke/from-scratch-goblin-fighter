@@ -58,6 +58,7 @@ function displayGoblins() {
             } else {
                 alert(`You missed...`);
             }
+            
             if (playerHP > 0 && goblin.hp > 0 && Math.random() > .5) {
                 alert(`${goblin.name} strikes back!`);
                 playerHP--;
@@ -65,12 +66,22 @@ function displayGoblins() {
                 alert(`${goblin.name} strikes back! But they missed...`);
             }
             
+            if (goblin.hp === 0) {
+                defeatedGoblins++;
+            }
 
             displayGoblins();
-            //****function to display playerHP */
+            displayStats();
         });
 
     }
 }
 
 displayGoblins();
+
+function displayStats() {
+    spanDefeated.textContent = defeatedGoblins;
+    spanHP.textContent = playerHP;
+}
+
+console.log(displayStats());
