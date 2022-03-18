@@ -6,7 +6,6 @@ const spanDefeated = document.querySelector('#defeated-goblins');
 const spanHP = document.querySelector('#player-hp');
 
 const goblinInput = document.querySelector('#goblin-input');
-const goblinButton = document.querySelector('#spawn-goblin-button');
 const goblinForm = document.querySelector('form');
 const goblinList = document.querySelector('.goblin-container');
 
@@ -35,10 +34,6 @@ goblinForm.addEventListener('submit', (e) => {
     displayGoblins();
 
     goblinInput.value = '';
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
 
 });
 
@@ -56,6 +51,7 @@ function displayGoblins() {
                 alert('Settle down.');
                 return;
             }
+
             if (goblin.hp > 0 && Math.random() > .33) {
                 alert(`You hit ${goblin.name}!`);
                 goblin.hp--;
@@ -73,6 +69,10 @@ function displayGoblins() {
             
             if (goblin.hp === 0) {
                 defeatedGoblins++;
+            }
+
+            if (playerHP === 0) {
+                alert('')
             }
             
             displayGoblins();
