@@ -2,19 +2,30 @@ export function renderGoblin(goblin) {
     const goblinEl = document.createElement('div');
     const nameEl = document.createElement('p');
     const hpEl = document.createElement('p');
+    const imgEl = document.createElement('img');
 
-    let goblinEmoji = '';
 
-    if (goblin.hp >= 1) {
-        goblinEmoji = '👹';
-    } else if (goblin.hp === 0) {
-        goblinEmoji = '💀';
-    }
+    //goblinEl.classList.add('.monster');
+    
+    //let goblinEmoji = '';
+
+    // if (goblin.hp >= 1) {
+    //     goblinEmoji = '👹';
+    // } else if (goblin.hp === 0) {
+    //     goblinEmoji = '💀';
+    // }
 
     nameEl.textContent = goblin.name;
-    hpEl.textContent = `${goblinEmoji} ${goblin.hp}`;
+    imgEl.src = './assets/monster.png';
+    hpEl.textContent = `${goblin.hp}`;
+    
+    if (goblin.hp === 0) {
+        imgEl.src = './assets/dead.png';
+        imgEl.classList.add('.dead');
+    }
 
-    goblinEl.append(nameEl, hpEl);
+
+    goblinEl.append(nameEl, hpEl, imgEl);
 
     return goblinEl;
 
