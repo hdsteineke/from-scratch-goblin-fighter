@@ -8,7 +8,7 @@ const spanHP = document.querySelector('#player-hp');
 const goblinInput = document.querySelector('#goblin-input');
 const goblinForm = document.querySelector('form');
 const goblinList = document.querySelector('.goblin-container');
-const gameOverImg = document.querySelector('.game-over');
+const playAgain = document.querySelector('#play-again-button');
 
 // let state
 let defeatedGoblins = 0;
@@ -20,7 +20,7 @@ let goblins = [
 ];
 
 
-
+//playAgain.classList.add('hidden');
 
 goblinForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -98,7 +98,9 @@ function displayGoblins() {
         }
         if (playerHP === 0) {
             goblinForm.classList.add('hidden');
-            gameOverImg.src = './assets/game-over.png';
+            goblinList.classList.add('hidden');
+            playAgain.src = './assets/play-again.PNG';
+
     
         }
         goblinList.append(goblinEl);

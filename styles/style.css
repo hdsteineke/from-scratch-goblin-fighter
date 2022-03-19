@@ -54,9 +54,9 @@ section {
     justify-content: center;
     align-items: center;
     padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
+    /*padding-bottom: var(--gutter); */
     margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
+    /*margin-bottom: var(--gutter);*/
 }
 
 header {
@@ -151,4 +151,8 @@ footer {
 .dead {
     height: 200px;
     width: 200px;
+}
+
+.display {
+    image: url('../assets/play-again.png');
 }
