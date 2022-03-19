@@ -97,6 +97,7 @@ function displayGoblins() {
         }
         if (playerHP === 0) {
             goblinForm.classList.add('hidden');
+    
         }
         goblinList.append(goblinEl);
     }

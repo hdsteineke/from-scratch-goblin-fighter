@@ -32,6 +32,7 @@ time, mark, audio, video {
 	/* font: inherit; */
 	color: white;
 	vertical-align: baseline;
+	font-weight: bold;
 }
 
 ol, ul {

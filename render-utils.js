@@ -1,8 +1,8 @@
 export function renderGoblin(goblin) {
     const goblinEl = document.createElement('div');
     const nameEl = document.createElement('p');
-    const imgEl = document.createElement('img');
     const hpEl = document.createElement('p');
+    const imgEl = document.createElement('img');
 
 
     //goblinEl.classList.add('.monster');
@@ -24,7 +24,7 @@ export function renderGoblin(goblin) {
         imgEl.classList.add('.dead');
     }
 
-    goblinEl.append(nameEl, imgEl, hpEl);
+    goblinEl.append(nameEl, hpEl, imgEl);
 
     return goblinEl;
 
