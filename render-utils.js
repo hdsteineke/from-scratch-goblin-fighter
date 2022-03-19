@@ -24,6 +24,7 @@ export function renderGoblin(goblin) {
         imgEl.classList.add('.dead');
     }
 
+
     goblinEl.append(nameEl, hpEl, imgEl);
 
     return goblinEl;

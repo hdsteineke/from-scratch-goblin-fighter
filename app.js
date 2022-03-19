@@ -8,10 +8,11 @@ const spanHP = document.querySelector('#player-hp');
 const goblinInput = document.querySelector('#goblin-input');
 const goblinForm = document.querySelector('form');
 const goblinList = document.querySelector('.goblin-container');
+const gameOverImg = document.querySelector('.game-over');
 
 // let state
 let defeatedGoblins = 0;
-let playerHP = 10;
+let playerHP = 1;
 let goblins = [
     { name: 'Fabian', hp: 3, strength: 5 },
     { name: 'Flupe', hp: 3, strength: 2 },
@@ -71,7 +72,7 @@ function displayGoblins() {
                     alert(`You missed...`);
                 }
             
-                if (goblin.hp > 0 && Math.random() > .99) {
+                if (goblin.hp > 0 && Math.random() > .01) {
                     alert(`${goblin.name} strikes back!`);
                     playerHP -= goblin.strength;
 
@@ -97,6 +98,7 @@ function displayGoblins() {
         }
         if (playerHP === 0) {
             goblinForm.classList.add('hidden');
+            gameOverImg.src = './assets/game-over.png';
     
         }
         goblinList.append(goblinEl);
