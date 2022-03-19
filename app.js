@@ -12,11 +12,11 @@ const playAgain = document.querySelector('#play-again-button');
 
 // let state
 let defeatedGoblins = 0;
-let playerHP = 1;
+let playerHP = 10;
 let goblins = [
-    { name: 'Fabian', hp: 3, strength: 5 },
-    { name: 'Flupe', hp: 3, strength: 2 },
-    { name: 'Jimbo', hp: 3, strength: 4 }
+    { name: 'Haraz', hp: 3, strength: 5 },
+    { name: 'Beezlebub', hp: 3, strength: 2 },
+    { name: 'Jora', hp: 3, strength: 4 }
 ];
 
 
@@ -64,7 +64,7 @@ function displayGoblins() {
                     return;
                 }
 
-                if (goblin.hp > 0 && Math.random() > .01) {
+                if (goblin.hp > 0 && Math.random() > .2) {
                     alert(`You hit ${goblin.name}!`);
                     goblin.hp--;
                 //some way to randomize goblinHit, playerHit, and alerts for each
@@ -72,7 +72,7 @@ function displayGoblins() {
                     alert(`You missed...`);
                 }
             
-                if (goblin.hp > 0 && Math.random() > .01) {
+                if (goblin.hp > 0 && Math.random() > .4) {
                     alert(`${goblin.name} strikes back!`);
                     playerHP -= goblin.strength;
 
