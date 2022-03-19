@@ -101,6 +101,10 @@ function displayGoblins() {
             goblinList.classList.add('hidden');
             playAgain.src = './assets/play-again.PNG';
 
+            playAgain.addEventListener('click', () => {
+                
+            });
+
     
         }
         goblinList.append(goblinEl);
