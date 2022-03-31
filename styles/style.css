@@ -28,8 +28,14 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    font:color; white;
+    /* background-color: var(--color2); */
+    background-image: url('../assets/background.png')
+    
+
 }
+
+
 
 main {
     display: flex;
@@ -40,17 +46,17 @@ main {
 }
 
 section {
-    background-color: var(--color5);
+    background-color: transparent;
     max-width: 80%;
+    /* height: 800px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
+    /*padding-bottom: var(--gutter); */
     margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    /*margin-bottom: var(--gutter);*/
 }
 
 header {
@@ -77,6 +83,10 @@ header img {
 
 p {
     margin: var(--gutter);
+    padding: 1px;
+    margin: 1px;
+    text-align: center
+
 }
   
 footer {
@@ -88,4 +98,61 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+.main-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    background: none;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    background: none;
+}
+
+
+#geralt {
+    font-size: large;
+    font-weight: bolder
+    
+}
+
+.monster {
+    background-image: url('../assets/monster.png');
+}
+
+.goblin-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+:disabled:is(
+    button,
+    optgroup,
+    option,
+    select,
+    textarea,
+    input
+) {
+  pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.dead {
+    height: 200px;
+    width: 200px;
+}
+
+.display {
+    image: url('../assets/play-again.png');
 }

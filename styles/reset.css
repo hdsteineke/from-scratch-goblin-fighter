@@ -29,8 +29,10 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	/* font: inherit; */
+	color: white;
 	vertical-align: baseline;
+	font-weight: bold;
 }
 
 ol, ul {
